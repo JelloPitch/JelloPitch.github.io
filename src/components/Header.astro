@@ -1,0 +1,40 @@
+---
+const navItems = [
+	{ href: "#funktionen", label: "Funktionen" },
+	{ href: "#ueber-uns", label: "Über uns" },
+	{ href: "#pilot", label: "Pilotphase" },
+];
+---
+
+<header class="sticky top-0 z-50 border-b border-black/5 bg-canvas/80 backdrop-blur">
+	<div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+		<a href="#top" class="flex items-center gap-2">
+			<span
+				class="flex h-8 w-8 items-center justify-center rounded-lg bg-accent text-sm font-bold text-ink"
+			>
+				J
+			</span>
+			<span class="text-base font-bold tracking-tight text-ink">Jello Pitch</span>
+		</a>
+
+		<nav class="hidden items-center gap-8 md:flex">
+			{
+				navItems.map((item) => (
+					<a
+						href={item.href}
+						class="text-sm font-medium text-ink/70 transition-colors hover:text-ink"
+					>
+						{item.label}
+					</a>
+				))
+			}
+		</nav>
+
+		<a
+			href="mailto:jello@t-online.de?subject=Pilotphase%20Jello%20Pitch"
+			class="rounded-full bg-accent px-4 py-2 text-sm font-bold text-ink shadow-sm transition-transform hover:scale-[1.03] active:scale-[0.98]"
+		>
+			Tester werden
+		</a>
+	</div>
+</header>

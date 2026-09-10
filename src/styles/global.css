@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --color-accent: #eae52b;
+  --color-accent-dark: #cfca1c;
+  --color-canvas: #efefef;
+  --color-ink: #18181b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+}

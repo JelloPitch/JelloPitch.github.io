@@ -1,0 +1,57 @@
+---
+import Icon from "./Icon.astro";
+
+const features = [
+	{
+		title: "24/7 Check-in / -out",
+		text: "Dein Stellplatz brummt rund um die Uhr, auch wenn du gerade nicht erreichbar bist.",
+	},
+	{
+		title: "Für deinen Stellplatz entwickelt",
+		text: "Eine simple Buchungslösung, speziell für kleine Stellplätze, um dir und deinen Campern den Buchungsprozess zu erleichtern.",
+	},
+	{
+		title: "Einnahmen automatisch verbucht",
+		text: "Keine Excel-Tabelle mehr von Hand pflegen.",
+	},
+	{
+		title: "Immer ein aktueller Belegungsplan",
+		text: "Du und deine Gäste können immer und überall einsehen, ob noch Plätze frei sind.",
+	},
+	{
+		title: "Deine eigene Buchungsseite",
+		text: "Auf deiner Website oder den Buchungsportalen deiner Wahl.",
+	},
+	{
+		title: "Jeder Gast, wie er es mag",
+		text: "Persönlich vor Ort oder rund um die Uhr selbst einchecken. Bei Jello läuft alles an einem Ort zusammen. Dabei reduziert Jello eingehende Anrufe und klärt viele Fragen der Gäste bereits im Vorfeld.",
+	},
+];
+---
+
+<section id="funktionen" class="mx-auto max-w-6xl px-6 py-20">
+	<div class="max-w-xl">
+		<h2 class="text-3xl font-bold tracking-tight text-ink md:text-4xl">
+			Deine Vorteile mit Jello.
+		</h2>
+		<p class="mt-4 text-lg text-ink/70">
+			Hier siehst du, was uns wichtig ist und uns ausmacht. In der
+			Pilotphase kannst du Jello aktiv mitgestalten und deine eigenen
+			Ideen einbringen.
+		</p>
+	</div>
+
+	<div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+		{
+			features.map((f) => (
+				<div class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-black/5 transition-shadow hover:shadow-md">
+					<div class="flex h-10 w-10 items-center justify-center rounded-full bg-accent">
+						<Icon name="check" class="h-5 w-5 text-white" />
+					</div>
+					<h3 class="mt-4 text-xl font-bold uppercase text-ink">{f.title}</h3>
+					<p class="mt-2 text-sm leading-relaxed text-ink/60">{f.text}</p>
+				</div>
+			))
+		}
+	</div>
+</section>

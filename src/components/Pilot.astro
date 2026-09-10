@@ -1,0 +1,69 @@
+---
+import Icon from "./Icon.astro";
+
+const included = [
+	{
+		icon: "check" as const,
+		title: "Kostenlose Nutzung",
+		text: "Du testest die komplette Buchungslösung in der Pilotphase ohne Kosten.",
+	},
+	{
+		icon: "layout-grid" as const,
+		title: "Wir übernehmen die Einrichtung",
+		text: "Wir richten deine Buchungsseite für dich ein und erstellen dir einen professionellen Lageplan deines Platzes.",
+	},
+	{
+		icon: "sparkles" as const,
+		title: "Mitentwickeln",
+		text: "Dein Feedback fließt direkt in die Weiterentwicklung des Tools ein.",
+	},
+	{
+		icon: "clock" as const,
+		title: "100 % Unverbindlich",
+		text: "Wir sind überzeugt, dass Jello Pitch dir eine große Hilfe sein wird. Wenn nicht, beendest du die Nutzung einfach jederzeit.",
+	},
+];
+---
+
+<section id="pilot" class="mx-auto max-w-6xl px-6 py-20">
+	<div class="rounded-3xl border border-black/10 bg-white p-8 md:p-12">
+		<span
+			class="inline-flex items-center gap-2 rounded-full bg-ink px-3 py-1 text-xs font-semibold text-white"
+		>
+			<Icon name="sparkles" class="h-3.5 w-3.5 text-accent" />
+			In Entwicklung
+		</span>
+
+		<h2 class="mt-5 max-w-2xl text-3xl font-bold tracking-tight text-ink md:text-4xl">
+			Wir suchen Stellplätze für unsere Pilotphase.
+		</h2>
+		<p class="mt-4 max-w-2xl text-lg text-ink/70">
+			Jello Pitch befindet sich aktuell in der Entwicklung und ist noch
+			nicht öffentlich verfügbar. Als Pilot-Partner testest du die
+			Buchungslösung kostenlos, hilfst uns, sie gemeinsam weiter zu
+			verbessern, und bekommst alle Tools von uns gestellt.
+		</p>
+
+		<div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+			{
+				included.map((item) => (
+					<div>
+						<div class="flex h-10 w-10 items-center justify-center rounded-full bg-accent">
+							<Icon name={item.icon} class="h-5 w-5 text-ink" />
+						</div>
+						<h3 class="mt-4 text-base font-bold text-ink">{item.title}</h3>
+						<p class="mt-1.5 text-sm text-ink/70">{item.text}</p>
+					</div>
+				))
+			}
+		</div>
+
+		<a
+			href="mailto:jello@t-online.de?subject=Pilotphase%20Jello%20Pitch"
+			class="mt-10 inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-bold text-ink shadow-sm transition-transform hover:scale-[1.03] active:scale-[0.98]"
+		>
+			Als Pilot-Partner bewerben
+			<Icon name="arrow-right" class="h-4 w-4" />
+		</a>
+	</div>
+</section>

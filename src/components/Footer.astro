@@ -1,0 +1,32 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-black/5">
+	<div class="mx-auto max-w-6xl px-6 py-10">
+		<div class="flex flex-col items-center justify-between gap-6 md:flex-row">
+			<a href="#top" class="flex items-center gap-2">
+				<span
+					class="flex h-7 w-7 items-center justify-center rounded-md bg-accent text-xs font-bold text-ink"
+				>
+					J
+				</span>
+				<span class="text-sm font-bold text-ink">Jello Pitch</span>
+			</a>
+
+			<nav class="flex flex-wrap items-center justify-center gap-6 text-sm text-ink/60">
+				<a href="#funktionen" class="hover:text-ink">Funktionen</a>
+				<a href="#demo" class="hover:text-ink">Demo</a>
+				<a href="mailto:jello@t-online.de" class="hover:text-ink">Kontakt</a>
+			</nav>
+		</div>
+
+		<div class="mt-8 flex flex-col items-center justify-between gap-4 border-t border-black/5 pt-6 text-xs text-ink/40 md:flex-row">
+			<p>© {year} Jello Pitch</p>
+			<nav class="flex items-center gap-4">
+				<a href="/impressum" class="hover:text-ink/70">Impressum</a>
+				<a href="/datenschutz" class="hover:text-ink/70">Datenschutz</a>
+			</nav>
+		</div>
+	</div>
+</footer>
