@@ -23,7 +23,11 @@ interface Props {
 		| "user"
 		| "clock"
 		| "euro"
-		| "van";
+		| "van"
+		| "book"
+		| "clipboard"
+		| "settings"
+		| "trending-up";
 	class?: string;
 }
 
@@ -61,6 +65,12 @@ const paths: Record<string, string> = {
 	clock: "M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20ZM12 6v6l4 2",
 	euro: "M18 5a7.5 7.5 0 1 0 0 14M3 10h10M3 14h8",
 	van: "M3 16V8a2 2 0 0 1 2-2h9l4 4h1a2 2 0 0 1 2 2v4M3 16a2 2 0 0 0 2 2h1M3 16h13M18 18h1a2 2 0 0 0 2-2v-2M7 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM17 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z",
+	book: "M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2ZM4 19.5A2.5 2.5 0 0 1 6.5 17H20",
+	clipboard:
+		"M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8L14 2ZM9 13h6M9 17h6M9 9h1",
+	settings:
+		"M4 6h6M4 12h12M4 18h8M14 6a2 2 0 1 0 4 0 2 2 0 0 0-4 0ZM8 12a2 2 0 1 0 4 0 2 2 0 0 0-4 0ZM12 18a2 2 0 1 0 4 0 2 2 0 0 0-4 0Z",
+	"trending-up": "M3 17l6-6 4 4 8-8M15 7h6v6",
 };
 
 const filled = name === "star";
