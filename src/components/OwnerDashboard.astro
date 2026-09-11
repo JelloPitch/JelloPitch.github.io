@@ -28,7 +28,7 @@ const bookings = [
 		anreise: "02. Aug.",
 		checkout: "10. Aug.",
 		kunde: "Maurer",
-		status: "abgeschlossen",
+		status: "bezahlt",
 		einnahme: "216,83 €",
 		zahlung: "bezahlt",
 	},
@@ -38,7 +38,7 @@ const bookings = [
 		anreise: "15. Aug.",
 		checkout: "16. Aug.",
 		kunde: "Testi",
-		status: "anstehend",
+		status: "bezahlt",
 		einnahme: "33,08 €",
 		zahlung: "bezahlt",
 	},
@@ -48,7 +48,7 @@ const bookings = [
 		anreise: "31. Juli",
 		checkout: "02. Aug.",
 		kunde: "Familie Müller",
-		status: "abgeschlossen",
+		status: "bezahlt",
 		einnahme: "33,08 €",
 		zahlung: "bezahlt",
 	},
@@ -57,8 +57,8 @@ const bookings = [
 		parzelle: "P2",
 		anreise: "05. Aug.",
 		checkout: "09. Aug.",
-		kunde: "Thomas Bauer",
-		status: "anstehend",
+		kunde: "Max Mustermann",
+		status: "bezahlt",
 		einnahme: "149,10 €",
 		zahlung: "bezahlt",
 	},
@@ -68,7 +68,7 @@ const bookings = [
 		anreise: "07. Aug.",
 		checkout: "11. Aug.",
 		kunde: "Susanne Wagner",
-		status: "anstehend",
+		status: "bezahlt",
 		einnahme: "140,70 €",
 		zahlung: "bezahlt",
 	},
@@ -78,7 +78,7 @@ const bookings = [
 		anreise: "08. Aug.",
 		checkout: "12. Aug.",
 		kunde: "Familie Schmidt",
-		status: "abgeschlossen",
+		status: "bezahlt",
 		einnahme: "202,13 €",
 		zahlung: "bezahlt",
 	},
@@ -86,18 +86,15 @@ const bookings = [
 
 const statusPill: Record<string, string> = {
 	aktiv: "bg-accent text-ink",
-	abgeschlossen: "bg-black/10 text-ink/60",
-	anstehend: "bg-blue-50 text-blue-700",
+	bezahlt: "bg-black/10 text-ink/60",
 };
 const statusDot: Record<string, string> = {
 	aktiv: "bg-ink",
-	abgeschlossen: "bg-ink/40",
-	anstehend: "bg-blue-600",
+	bezahlt: "bg-ink/40",
 };
 const statusLabel: Record<string, string> = {
 	aktiv: "Aktiv",
-	abgeschlossen: "Abgeschlossen",
-	anstehend: "Anstehend",
+	bezahlt: "Bezahlt",
 };
 ---
 
