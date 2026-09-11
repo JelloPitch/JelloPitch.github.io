@@ -27,7 +27,10 @@ interface Props {
 		| "book"
 		| "clipboard"
 		| "settings"
-		| "trending-up";
+		| "trending-up"
+		| "search"
+		| "chevron-down"
+		| "more-horizontal";
 	class?: string;
 }
 
@@ -71,6 +74,9 @@ const paths: Record<string, string> = {
 	settings:
 		"M4 6h6M4 12h12M4 18h8M14 6a2 2 0 1 0 4 0 2 2 0 0 0-4 0ZM8 12a2 2 0 1 0 4 0 2 2 0 0 0-4 0ZM12 18a2 2 0 1 0 4 0 2 2 0 0 0-4 0Z",
 	"trending-up": "M3 17l6-6 4 4 8-8M15 7h6v6",
+	search: "M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16ZM21 21l-4.35-4.35",
+	"chevron-down": "m6 9 6 6 6-6",
+	"more-horizontal": "M5 12h.01M12 12h.01M19 12h.01",
 };
 
 const filled = name === "star";
