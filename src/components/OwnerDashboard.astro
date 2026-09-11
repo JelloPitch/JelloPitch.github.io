@@ -7,7 +7,7 @@ const bookings = [
 		parzelle: "P1",
 		anreise: "11. Aug.",
 		checkout: "offen",
-		kunde: "Nane Maurer",
+		kunde: "Julia Hoffmann",
 		status: "aktiv",
 		einnahme: "0,00 €",
 		zahlung: "ausstehend",
@@ -17,7 +17,7 @@ const bookings = [
 		parzelle: "P3",
 		anreise: "06. Aug.",
 		checkout: "offen",
-		kunde: "Nikolai",
+		kunde: "Lukas Schneider",
 		status: "aktiv",
 		einnahme: "0,00 €",
 		zahlung: "ausstehend",
@@ -27,7 +27,7 @@ const bookings = [
 		parzelle: "P1",
 		anreise: "02. Aug.",
 		checkout: "10. Aug.",
-		kunde: "Maurer",
+		kunde: "Sophie Becker",
 		status: "bezahlt",
 		einnahme: "216,83 €",
 		zahlung: "bezahlt",
@@ -37,7 +37,7 @@ const bookings = [
 		parzelle: "P1",
 		anreise: "15. Aug.",
 		checkout: "16. Aug.",
-		kunde: "Testi",
+		kunde: "Tim Fischer",
 		status: "bezahlt",
 		einnahme: "33,08 €",
 		zahlung: "bezahlt",
@@ -224,7 +224,62 @@ const statusLabel: Record<string, string> = {
 												<span class="text-xs text-ink/60">{b.checkout}</span>
 											)}
 										</td>
-										<td class="py-2.5 pr-2 text-xs font-semibold text-ink">{b.kunde}</td>
+										<td class="relative py-2.5 pr-2 text-xs font-semibold text-ink">
+											{b.kunde}
+											{b.kunde === "Max Mustermann" && (
+												<div class="absolute left-0 top-full z-10 mt-8 w-56 rounded-2xl bg-white p-4 shadow-xl ring-1 ring-black/10">
+													<svg
+														class="pointer-events-none absolute -top-7 left-6 h-8 w-10 text-ink/50"
+														viewBox="0 0 40 32"
+														fill="none"
+													>
+														<path
+															d="M4 28C4 14 18 6 34 4"
+															stroke="currentColor"
+															stroke-width="2"
+															stroke-linecap="round"
+														/>
+														<path
+															d="M27 3 L35 4 L32 11"
+															stroke="currentColor"
+															stroke-width="2"
+															stroke-linecap="round"
+															stroke-linejoin="round"
+														/>
+													</svg>
+													<div class="flex items-center gap-2">
+														<span class="flex h-8 w-8 items-center justify-center rounded-full bg-accent text-xs font-bold text-ink">
+															M
+														</span>
+														<div>
+															<p class="text-xs font-bold text-ink">Max Mustermann</p>
+															<p class="text-[10px] text-ink/50">Parzelle P2</p>
+														</div>
+													</div>
+													<div class="mt-3 space-y-1.5 text-[10px]">
+														<div class="flex items-center justify-between">
+															<span class="text-ink/40">E-Mail</span>
+															<span class="font-semibold text-ink">max@beispiel.de</span>
+														</div>
+														<div class="flex items-center justify-between">
+															<span class="text-ink/40">Telefon</span>
+															<span class="font-semibold text-ink">0176 55849213</span>
+														</div>
+														<div class="flex items-center justify-between">
+															<span class="text-ink/40">Personen</span>
+															<span class="font-semibold text-ink">2</span>
+														</div>
+														<div class="flex items-center justify-between">
+															<span class="text-ink/40">Kennzeichen</span>
+															<span class="font-semibold text-ink">M-AB 1234</span>
+														</div>
+													</div>
+													<button class="mt-3 w-full rounded-lg bg-accent py-1.5 text-[11px] font-bold text-ink">
+														Kundenprofil öffnen
+													</button>
+												</div>
+											)}
+										</td>
 										<td class="py-2.5 pr-2">
 											<span class={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-semibold ${statusPill[b.status]}`}>
 												<span class={`h-1.5 w-1.5 rounded-full ${statusDot[b.status]}`} />
@@ -249,44 +304,7 @@ const statusLabel: Record<string, string> = {
 						</tbody>
 					</table>
 
-					<div
-						class="absolute -bottom-8 left-6 z-10 w-56 rounded-2xl bg-white p-4 shadow-xl ring-1 ring-black/10"
-					>
-						<div class="flex items-center justify-between">
-							<div class="flex items-center gap-2">
-								<span
-									class="flex h-8 w-8 items-center justify-center rounded-full bg-accent text-xs font-bold text-ink"
-								>
-									N
-								</span>
-								<div>
-									<p class="text-xs font-bold text-ink">Nane Maurer</p>
-									<p class="text-[10px] text-ink/50">Braunschweig</p>
-								</div>
-							</div>
-						</div>
-						<div class="mt-3 space-y-1.5 text-[10px]">
-							<div class="flex items-center justify-between">
-								<span class="text-ink/40">E-Mail</span>
-								<span class="font-semibold text-ink">nane-maurer@t-online.de</span>
-							</div>
-							<div class="flex items-center justify-between">
-								<span class="text-ink/40">Telefon</span>
-								<span class="font-semibold text-ink">01733131051</span>
-							</div>
-							<div class="flex items-center justify-between">
-								<span class="text-ink/40">Buchungen gesamt</span>
-								<span class="font-semibold text-ink">2</span>
-							</div>
-						</div>
-						<button
-							class="mt-3 w-full rounded-lg bg-accent py-1.5 text-[11px] font-bold text-ink"
-						>
-							Kundenprofil öffnen
-						</button>
-					</div>
-
-					<div class="h-10" aria-hidden="true"></div>
+					<div class="h-44" aria-hidden="true"></div>
 				</div>
 			</div>
 		</div>
